@@ -1,46 +1,59 @@
 <script lang="ts">
+	let currentUser = {
+		name: 'BuidlWithAngga',
+		username: '@bwa'
+	};
+
 	let users = [
 		{
-			name: 'Shayna',
-			username: '@shayna',
-			date: '12 Jan 2025',
+			name: 'BuidlWithAngga',
+			username: '@bwa',
+			date: '12 Feb 2025',
 			likes: 400,
-			isLiked: false,
-			chat: 'lorem ipsum dolor sit amet dolor sit amet sit amet',
-			image: '/avatar-1.png'
-		},
-		{
-			name: 'Jhon Doe',
-			username: '@john',
-			date: '12 Jan 2025',
-			likes: 400,
-			isLiked: false,
-			chat: 'lorem ipsum dolor sit amet dolor sit amet sit amet',
-			image: '/avatar-2.png'
-		},
-		{
-			name: 'Alice Graham',
-			username: '@alice',
-			date: '12 Jan 2025',
-			likes: 400,
-			isLiked: false,
-			chat: 'lorem ipsum dolor sit amet dolor sit amet sit amet',
-			image: '/avatar-3.png'
+			isLiked: true,
+			chat: 'Halo semuanya, dalam merayakan ulang tahun BuildWithAngga ke-4 maka kami telah merilis 6 kelas gratis terbaru untuk dipelajari tahun ini.',
+			image: '/bwa.png'
 		}
 	];
 
 	function toggleLike(index: number) {
-		const user = users[index];
-		if (user.isLiked) {
-			user.likes -= 1;
+		if (currentUser.username === users[index].username) {
+			const user = users[index];
+			if (user.isLiked) {
+				user.likes -= 1;
+			} else {
+				user.likes += 1;
+			}
+			user.isLiked = !user.isLiked;
 		} else {
-			user.likes += 1;
+			alert('Hanya pengguna akun ini yang dapat melakukan interaksi.');
 		}
-		user.isLiked = !user.isLiked;
 	}
 </script>
 
 <div class="text-white">
+	<div class="p-4 bordered">
+		<div class="flex">
+			<img src="/bwa.png" alt="images" class="w-10 h-10 rounded-full" />
+			<div class="ml-2 grid column w-full">
+				<div class="flex items-center space-x-1">
+					<span class="font-semibold text-xl text-[#5E6368] pl-2 pt-1">What is happening?!</span>
+				</div>
+				<!-- isi konten -->
+				<div class="pt-4">
+					<p class="font-light pb-3"></p>
+				</div>
+				<!-- like and report -->
+				<div class="pt-12 flex justify-end">
+					<button
+						class="flex items-center rounded-full px-8 py-2 font-bold bg-[#1880E8] text-white text-md"
+					>
+						Post
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	{#each users as user, index}
 		<div class="p-4 bordered">
 			<div class="flex">
