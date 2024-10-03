@@ -1,0 +1,80 @@
+<script lang="ts">
+	// Array dinamis untuk daftar user yang mungkin ingin di-follow
+	let users = [
+		{
+			name: 'Shayna',
+			username: '@shayna',
+			image: '/avatar-1.png',
+			isFollowing: false
+		},
+		{
+			name: 'Jhon Doe',
+			username: '@john',
+			image: '/avatar-2.png',
+			isFollowing: false
+		},
+		{
+			name: 'Alice Graham',
+			username: '@alice',
+			image: '/avatar-3.png',
+			isFollowing: false
+		}
+	];
+
+	// Fungsi untuk toggle status follow
+	function toggleFollow(index: number) {
+		users[index].isFollowing = !users[index].isFollowing;
+	}
+</script>
+
+<div class="background rounded-lg p-4">
+	<h1 class="font-bold text-lg pb-3">You might like</h1>
+	<div>
+		{#each users as user, index}
+			<div
+				class="flex items-center justify-between space-x-3 p-2 bg-transparent text-white rounded-lg"
+			>
+				<div class="flex">
+					<img src={user.image} alt={user.name} class="w-10 h-10 rounded-full" />
+					<div class="ml-2 grid column">
+						<div class="flex items-center space-x-1">
+							<span class="font-semibold">{user.name}</span>
+							<!-- Verified Icon (opsional, bisa diatur dinamis) -->
+							<svg
+								width="20"
+								height="21"
+								viewBox="0 0 20 21"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M17.9666 9.44997L16.8333 8.1333C16.6166 7.8833 16.4416 7.41663 16.4416 7.0833V5.66663C16.4416 4.7833 15.7166 4.0583 14.8333 4.0583H13.4166C13.0916 4.0583 12.6166 3.8833 12.3666 3.66663L11.0499 2.5333C10.4749 2.04163 9.53328 2.04163 8.94994 2.5333L7.64161 3.67497C7.39161 3.8833 6.91661 4.0583 6.59161 4.0583H5.14994C4.26661 4.0583 3.54161 4.7833 3.54161 5.66663V7.09163C3.54161 7.41663 3.36661 7.8833 3.15828 8.1333L2.03328 9.4583C1.54994 10.0333 1.54994 10.9666 2.03328 11.5416L3.15828 12.8666C3.36661 13.1166 3.54161 13.5833 3.54161 13.9083V15.3333C3.54161 16.2166 4.26661 16.9416 5.14994 16.9416H6.59161C6.91661 16.9416 7.39161 17.1166 7.64161 17.3333L8.95828 18.4666C9.53328 18.9583 10.4749 18.9583 11.0583 18.4666L12.3749 17.3333C12.6249 17.1166 13.0916 16.9416 13.4249 16.9416H14.8416C15.7249 16.9416 16.4499 16.2166 16.4499 15.3333V13.9166C16.4499 13.5916 16.6249 13.1166 16.8416 12.8666L17.9749 11.55C18.4583 10.975 18.4583 10.025 17.9666 9.44997ZM13.4666 8.92497L9.44161 12.95C9.32494 13.0666 9.16661 13.1333 8.99994 13.1333C8.83328 13.1333 8.67494 13.0666 8.55828 12.95L6.54161 10.9333C6.29994 10.6916 6.29994 10.2916 6.54161 10.05C6.78328 9.8083 7.18328 9.8083 7.42494 10.05L8.99994 11.625L12.5833 8.04163C12.8249 7.79997 13.2249 7.79997 13.4666 8.04163C13.7083 8.2833 13.7083 8.6833 13.4666 8.92497Z"
+									fill="#1880E8"
+								/>
+							</svg>
+						</div>
+						<span class="text-sm text-color">{user.username}</span>
+					</div>
+				</div>
+
+				<button
+					class="ml-auto text-sm bg-white text-black font-semibold py-1 px-3 rounded-full hover:bg-gray-200"
+					on:click={() => toggleFollow(index)}
+				>
+					{user.isFollowing ? 'Following' : 'Follow'}
+				</button>
+			</div>
+		{/each}
+	</div>
+	<br />
+	<button class="text-md font-semibold text-blue-500">Show more</button>
+</div>
+
+<style>
+	.background {
+		background-color: #121316;
+	}
+	.text-color {
+		color: #626262;
+	}
+</style>
