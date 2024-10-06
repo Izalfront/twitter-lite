@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Followers from './Followers.svelte';
-
 	import Search from './Search.svelte';
 	import Trending from './Trending.svelte';
 </script>
