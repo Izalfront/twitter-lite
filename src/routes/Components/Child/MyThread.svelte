@@ -60,7 +60,7 @@
 					id: $posts.length + 1,
 					name: currentUser.name,
 					username: currentUser.username,
-					date: new Date().toLocaleDateString(),
+					date: formatDate(new Date()),
 					likes: 0,
 					isLiked: false,
 					content: newPost.content,
@@ -87,7 +87,7 @@
 									id: post.replies.length + 1,
 									name: currentUser.name,
 									username: currentUser.username,
-									date: new Date().toLocaleDateString(),
+									date: formatDate(new Date()),
 									likes: 0,
 									isLiked: false,
 									content: newPost.content,
@@ -102,6 +102,10 @@
 			newPost.content = '';
 			newPost.replyingTo = null;
 		}
+	}
+	function formatDate(date: Date): string {
+		const options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'short', year: 'numeric' };
+		return new Intl.DateTimeFormat('en-GB', options).format(date);
 	}
 
 	function toggleLike(
