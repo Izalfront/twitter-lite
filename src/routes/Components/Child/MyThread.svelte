@@ -46,6 +46,21 @@
 		}
 	]);
 
+	let emotes = [
+		{
+			icon: '/happy.png',
+			icondesc: 'Happy'
+		},
+		{
+			icon: '/meledak.png',
+			icondesc: 'Shocked'
+		},
+		{
+			icon: '/sad.png',
+			icondesc: 'Sad'
+		}
+	];
+
 	let newPost: string = '';
 
 	function addPost(): void {
@@ -95,7 +110,7 @@
 		<div class="flex">
 			<img src={currentUser.image} alt={currentUser.name} class="w-10 h-10 rounded-full" />
 			<div class="ml-2 grid column w-full">
-				<div class="flex items-center space-x-1">
+				<div class="flex items-center space-x-1 mb-20">
 					<input
 						type="text"
 						placeholder="What is happening?!"
@@ -104,13 +119,26 @@
 					/>
 				</div>
 
-				<div class="pt-4 flex justify-end">
-					<button
-						on:click={addPost}
-						class="flex items-center rounded-full px-8 py-2 font-bold bg-[#1880E8] text-white text-md"
-					>
-						Post
-					</button>
+				<div class="flex items-center justify-between">
+					<!-- Emotes section -->
+					<div class="flex gap-x-2">
+						{#each emotes as iconic}
+							<div class="flex items-center border-[1px] border-[#1E1E1E] rounded-full px-3 py-1">
+								<img src={iconic.icon} alt={iconic.icondesc} class="w-6 h-6 mr-2" />
+								<p class="text-lg font-semibold">{iconic.icondesc}</p>
+							</div>
+						{/each}
+					</div>
+
+					<!-- Post button -->
+					<div class="flex justify-end">
+						<button
+							on:click={addPost}
+							class="flex items-center rounded-full px-8 py-2 font-bold bg-[#1880E8] text-white text-md"
+						>
+							Post
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

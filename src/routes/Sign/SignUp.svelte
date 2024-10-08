@@ -1,4 +1,9 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte';
+	const dispatch = createEventDispatcher();
+	function signIn() {
+		dispatch('signIn');
+	}
 </script>
 
 <section>
@@ -133,6 +138,7 @@
 					>Create Account</button
 				>
 				<button
+					on:click={signIn}
 					class="p-3 w-full bg-white rounded-full text-black hover:bg-blue-500 font-bold hover:text-white"
 					>Sign In to My Account</button
 				>
