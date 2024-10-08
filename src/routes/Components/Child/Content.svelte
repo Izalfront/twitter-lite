@@ -4,7 +4,7 @@
 	import Trending from './Trending.svelte';
 </script>
 
-<aside class="border-left w-96 text-white h-[100dvh]">
+<aside class="border-left w-96 text-white h-full">
 	<nav class="p-4 pt-8 mr-6">
 		<div class="mb-5">
 			<Search />

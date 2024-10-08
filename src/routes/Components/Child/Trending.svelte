@@ -3,7 +3,7 @@
 	let users = [
 		{
 			number: '1. Trending',
-			name: 'fufufafa',
+			name: 'Proyek garuda cbdc',
 			username: '141k Posts'
 		},
 		{

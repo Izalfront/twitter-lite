@@ -167,7 +167,7 @@
 			</h4>
 			<textarea
 				bind:value={newPost.content}
-				class="w-full mt-2 p-2 border rounded"
+				class="w-full mt-2 p-2 border rounded bg-transparent"
 				placeholder="Write your reply..."
 			></textarea>
 			<button on:click={submitReply} class="mt-2 p-2 bg-blue-500 text-white rounded"
