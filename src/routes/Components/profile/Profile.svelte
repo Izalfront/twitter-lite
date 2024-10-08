@@ -1,5 +1,6 @@
 <script lang="ts">
 	import MyThread from '../Child/MyThread.svelte';
+	import MyThreadPostProfile from './child-profile/MyThreadPostProfile.svelte';
 	import MyThreadProfile from './child-profile/MyThreadProfile.svelte';
 
 	let selectedTab: string = 'Posts';
@@ -18,7 +19,7 @@
 			<div>
 				<img src="./bwa-hd.png" alt="" class="absolute w-48 left-6 -bottom-20" />
 				<div
-					class="absolute left-[1.1rem] bottom-[-5.2rem] p-[6rem] border-[5px] border-[#010003] border- rounded-full"
+					class="absolute left-[1.1rem] bottom-[-5.3rem] p-[6rem] border-[6px] border-[#010003] border- rounded-full"
 				></div>
 			</div>
 		</div>
@@ -69,8 +70,7 @@
 			{/each}
 		</div>
 		<!-- MyThread -->
-
-		<MyThreadProfile />
+		<MyThreadPostProfile />
 	</div>
 </div>
 

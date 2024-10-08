@@ -3,18 +3,28 @@
 	let users = [
 		{
 			number: '1. Trending',
-			name: 'Proyek garuda cbdc',
-			username: '141k Posts'
+			name: 'belajar javascript di bwa',
+			username: '14k Posts'
 		},
 		{
 			number: '2. Trending',
-			name: 'Indonesia Resesi 2030',
-			username: '120k Posts'
+			name: 'kerja remote itu asik',
+			username: '14k Posts'
 		},
 		{
 			number: '3. Trending',
-			name: 'Inflasi Indonesia Naik',
-			username: '90k Posts'
+			name: 'bwa banyak kelas gratis',
+			username: '14k Posts'
+		},
+		{
+			number: '4. Trending',
+			name: 'mengapa coding sulit',
+			username: '14k Posts'
+		},
+		{
+			number: '5. Trending',
+			name: 'diskon bwa besar banget',
+			username: '14k Posts'
 		}
 	];
 </script>

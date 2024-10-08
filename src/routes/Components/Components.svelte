@@ -13,7 +13,7 @@
 	}
 </script>
 
-<div class="flex justify-between items-start h-[150dvh]">
+<div class="flex justify-between items-start h-[200dvh]">
 	<div class="w-1/4 h-full">
 		<SideBar {selectedMenu} {setSelectedMenu} />
 	</div>
@@ -26,7 +26,7 @@
 			<Profile />
 		{/if}
 	</div>
-	<div class="w-1/4 h-[150dvh]">
+	<div class="w-1/4 h-[200dvh]">
 		<Content />
 	</div>
 </div>
