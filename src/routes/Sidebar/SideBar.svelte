@@ -35,6 +35,12 @@
 						{item.name}
 					</li>
 				{/each}
+				<div class="mb-2"></div>
+				{#if selectedMenu == 'Profile'}
+					<button class="text-white font-semibold px-12 py-3 rounded-full bg-[#1880E8]"
+						>New Tweet</button
+					>
+				{/if}
 			</ul>
 		</div>
 	</nav>
