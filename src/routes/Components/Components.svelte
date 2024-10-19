@@ -7,9 +7,16 @@
 	import Profile from './profile/Profile.svelte';
 
 	let selectedMenu = 'Home';
+	let isNavHidden = false;
 
 	function setSelectedMenu(name: string) {
 		selectedMenu = name;
+
+		if (name === 'Profile') {
+			isNavHidden = true;
+		} else {
+			isNavHidden = false;
+		}
 	}
 </script>
 
@@ -18,7 +25,10 @@
 		<SideBar {selectedMenu} {setSelectedMenu} />
 	</div>
 	<div class="flex-grow w-full">
-		<NavContent />
+		{#if !isNavHidden}
+			<NavContent />
+		{/if}
+
 		{#if selectedMenu === 'Home'}
 			<MyThread />
 			<Thread />
