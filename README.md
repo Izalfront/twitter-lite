@@ -1,38 +1,32 @@
-# create-svelte
+# Twitter Clone - UI/UX Slicing
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This repository contains the result of UI/UX slicing from the Twitter clone design provided by [Shayna Kit](https://shaynakit.com/details/twitter-clone-website-design-buildwithangga). The project is built using **Tailwind CSS** and **Svelte** to create a responsive and functional user interface.
 
-## Creating a project
+## Features
+- Fully responsive for desktop view.
+- Functional buttons such as Like, Follow, and more.
+- Interactive header, sidebar, and other UI elements.
+- Clean and organized code using Svelte components.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Screenshots
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Sign Up Page
+![Sign Up Twitter](https://github.com/user-attachments/assets/aa5a19fb-e206-4867-8f12-e5e42af23ba6)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+### Homepage
+![Homepage Twitter](https://github.com/user-attachments/assets/0977af97-cc82-4052-908d-c01c3af3fafc)
 
-## Developing
+### Profile Page
+![Profile Page Twitter](https://github.com/user-attachments/assets/f5850e34-95e0-4e94-b800-f5447afcdb06)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Tech Stack
+- **Tailwind CSS**: For styling the layout and responsiveness.
+- **Svelte**: To build reactive and modular components.
 
-```bash
-npm run dev
+## Installation
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+To run this project locally, follow these steps:
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/twitter-clone.git
